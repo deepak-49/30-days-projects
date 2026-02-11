@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000, #0320ffb4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glassmorphism Container */
+.container {
+  height: 90vh;
+  width: 65%;
+  border-radius: 20px;
+  position: relative;
+  background: url("./Imgs/1.jpg") center/cover fixed no-repeat;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 rgba(255, 255, 255, 0.2);
+  transition: background 0.8s ease-in-out;
+}
+
+/* Buttons */
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Button positions */
+.btn-left {
+  left: -25px;
+}
+
+.btn-right {
+  right: -25px;
+}
+
+/* Hover effects */
+.btn:hover {
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: 60vh;
+  }
+
+  .btn {
+    height: 45px;
+    width: 45px;
+  }
+}
